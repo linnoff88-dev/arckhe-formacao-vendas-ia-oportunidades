@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>43 Opportunities to Make Money with AI | INEMA.CLUB</title>
+<meta content="vender-ia-oportunidades" name="inema-course"/>
+<!-- ANTI-FOUC: script bloqueante, PRIMEIRO no head, antes do Tailwind e de qualquer estilo -->
+<script>
+  (function () {
+    try {
+      var html = document.documentElement;
+      var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
+      var p = clone(DEF);
+      try {
+        var raw = localStorage.getItem('inema.prefs');
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
+        } else {
+          var legacy = localStorage.getItem('theme');
+          if (legacy === 'light') p.theme = 'claro';
+          else if (legacy === 'dark') p.theme = 'inema-dark';
+        }
+      } catch (e) { p = clone(DEF); }
+      var THEMES = {
+        'inema-dark': { dark: true, attr: null, cs: 'dark' },
+        'claro': { dark: false, attr: null, cs: 'light' },
+        'sepia': { dark: false, attr: 'sepia', cs: 'light' },
+        'foco': { dark: null, attr: 'foco', cs: null },
+        'contraste': { dark: true, attr: 'contraste', cs: 'dark' }
+      };
+      var t = THEMES[p.theme] || THEMES['inema-dark'];
+      if (t.dark === true) html.classList.add('dark');
+      else if (t.dark === false) html.classList.remove('dark');
+      if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
+      html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
+      html.setAttribute('data-font', p.font || 'inter');
+      html.setAttribute('data-accent', p.accent || 'emerald');
+      var s = html.style;
+      var scale = (+p.fontScale || 100);
+      s.setProperty('--inema-font-scale', (scale / 100).toString());
+      s.setProperty('font-size', scale + '%');
+      s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
+      s.setProperty('--lh-body', (+p.leading || 1.7).toString());
+      var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif'
+        : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
+      s.setProperty('--font-body', fam);
+      var ACC = { emerald: [152,76,45], blue: [217,91,60], purple: [258,90,66], amber: [38,92,50], teal: [174,72,41], rose: [350,89,60] };
+      var a = ACC[p.accent] || ACC.emerald;
+      s.setProperty('--accent-h', a[0] + ''); s.setProperty('--accent-s', a[1] + '%'); s.setProperty('--accent-l', a[2] + '%');
+      s.setProperty('--accent', 'hsl(' + a[0] + ' ' + a[1] + '% ' + a[2] + '%)');
+    } catch (err) {
+      try { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; } catch (e) {}
+    }
+  })();
+  </script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/learn.css" rel="stylesheet"/>
+<script data-inema-manifest="" type="application/json">
+{"course":"vender-ia-oportunidades","tracks":[
+{"n":"1","title":"Escolher","modules":[{"id":"1-1","title":"O mapa das 43 e como escolher a sua","topics":8,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Funis: como uma oportunidade vira receita","topics":7,"href":"curso/trilha1/modulo-1-2.html"}]},
+{"n":"2","title":"Oportunidades 1 a 10","modules":[{"id":"2-1","title":"As cinco portas de entrada","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"Do pé na porta ao sistema","topics":6,"href":"curso/trilha2/modulo-2-2.html"}]},
+{"n":"3","title":"Oportunidades 11 a 29","modules":[{"id":"3-1","title":"Produto, conteúdo e posição","topics":8,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Educação, comunidade e sistemas","topics":8,"href":"curso/trilha3/modulo-3-2.html"}]},
+{"n":"4","title":"Oportunidades 30 a 43","modules":[{"id":"4-1","title":"Nichos com barreira","topics":7,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Alavancas de audiência e o plano","topics":8,"href":"curso/trilha4/modulo-4-2.html"}]}
+]}
+</script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+    .skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: #111827; color: #FACC15; padding: .5rem 1rem; border-radius: .5rem; }
+    .skip:focus { left: .5rem; top: .5rem; }
+    [id] { scroll-margin-top: 88px; }
+    :focus-visible { outline: 3px solid var(--accent-2, #38bdf8); outline-offset: 2px; }
+
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    /* Light mode - cores de acento das 4 trilhas */
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5, 150, 105, 0.12); }
+    html:not(.dark) .bg-emerald-500\/10 { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5, 150, 105, 0.25); }
+    html:not(.dark) .border-emerald-500\/40 { border-color: rgba(5, 150, 105, 0.3); }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:border-emerald-500\/30:hover { border-color: rgba(5, 150, 105, 0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-emerald-400 { color: #059669; }
+
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37, 99, 235, 0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37, 99, 235, 0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37, 99, 235, 0.25); }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37, 99, 235, 0.08); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:border-blue-500\/30:hover { border-color: rgba(37, 99, 235, 0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-blue-400 { color: #2563eb; }
+
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .bg-purple-500\/20 { background-color: rgba(124, 58, 237, 0.12); }
+    html:not(.dark) .bg-purple-500\/10 { background-color: rgba(124, 58, 237, 0.08); }
+    html:not(.dark) .border-purple-500\/30 { border-color: rgba(124, 58, 237, 0.25); }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124, 58, 237, 0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:border-purple-500\/30:hover { border-color: rgba(124, 58, 237, 0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-purple-400 { color: #7c3aed; }
+
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217, 119, 6, 0.12); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217, 119, 6, 0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(217, 119, 6, 0.25); }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217, 119, 6, 0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:border-amber-500\/30:hover { border-color: rgba(217, 119, 6, 0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-amber-400 { color: #92400e; }
+
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161, 98, 7, 0.08); }
+    html:not(.dark) .bg-primary\/20 { background-color: rgba(161, 98, 7, 0.12); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161, 98, 7, 0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255, 255, 255, 0.95); }
+
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+    @keyframes wf-pulse { 0%,100% { opacity:.55 } 50% { opacity:1 } }
+    @media (prefers-reduced-motion: no-preference) {
+      .wf-a { animation: wf-pulse 2.6s ease-in-out infinite; }
+      .wf-a:nth-child(2){animation-delay:.25s} .wf-a:nth-child(3){animation-delay:.5s}
+      .wf-a:nth-child(4){animation-delay:.75s} .wf-a:nth-child(5){animation-delay:1s}
+    }
+  </style>
+<link href="https://inematds.github.io/formacao-vendas-ia-oportunidades/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/formacao-vendas-ia-oportunidades/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/formacao-vendas-ia-oportunidades/es/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-nova-versao" style="position:relative;z-index:9998;background:#FACC15;color:#0c0c10;font:600 14px/1.4 Sora,Inter,system-ui,sans-serif;padding:10px 16px;text-align:center">This course has a new version: more direct, with practice and a simulated conversation. <a href="https://inematds.github.io/formacao-vendas-ia-oportunidades-v72/en/" style="color:#0c0c10;text-decoration:underline;font-weight:700">Open the new version →</a></div><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="./" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="skip" href="#conteudo">Skip to content</a>
+<!-- NAVIGATION (completa em todas as paginas) -->
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="index.html">
+<span class="text-2xl">💰</span>
+<span class="font-bold text-lg hidden sm:inline">43 Opportunities</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+<span class="text-neutral-600">-</span>
+<a class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium" href="https://inema.pro" target="_blank">PRO</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-journey-open="" title="Your course journey" type="button">
+<span aria-hidden="true">◷</span><span class="hidden md:inline">My journey</span>
+<span aria-hidden="true" class="inema-journey-badge hidden" data-inema-journey-badge=""></span>
+</button>
+<a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../curso/trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Choose</span></a>
+<a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../curso/trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">1 a 10</span></a>
+<a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../curso/trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">11 a 29</span></a>
+<a class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../curso/trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">30 a 43</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-1" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo">
+<!-- HERO -->
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-16 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">
+          INTERACTIVE COURSE · AI SALES
+        </span>
+<h1 class="text-4xl sm:text-5xl font-bold mb-4">💰 43 Opportunities to Make Money with AI</h1>
+<p class="text-lg text-neutral-400 max-w-3xl mb-2" data-inema-block="landing-hero-p1">
+          Forty-three concrete ways to earn revenue with artificial intelligence — each with
+          <strong class="text-emerald-400">what it is, who to sell it to, how to charge, and the first step</strong>.
+          It’s not a list of loose ideas: it’s a decision map, with the funnel that turns each opportunity into revenue.
+        </p>
+<p class="text-neutral-400 max-w-3xl mb-8" data-inema-block="landing-hero-p2">
+          New here? <strong>Funnel</strong> is the path a person takes from stranger to paying customer.
+          <strong>Deal size</strong> is the value of a sale. <strong>Recurring revenue</strong> is what comes in every month without
+          selling again. All terms are defined within the course the first time they appear.
+        </p>
+<!-- Progresso do curso + continuar -->
+<div class="max-w-xl mb-8 bg-dark-800/60 rounded-xl border border-dark-600 p-4">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-semibold text-neutral-300">Your course progress</span>
+<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 of 58</span>
+</div>
+<div aria-label="Course progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter" data-inema-meter="curso" role="progressbar">
+<div class="flex items-center gap-3">
+<span class="text-emerald-400 font-bold text-lg w-14" data-inema-meter-pct="">0%</span>
+<div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+</div>
+</div>
+<div class="mt-3 flex flex-wrap gap-3">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-200 hover:bg-dark-600 transition-colors text-sm font-semibold" onclick="if(window.INEMA&amp;&amp;INEMA.resume){INEMA.resume()}else{location.href='curso/trilha1/modulo-1-1.html'}" type="button">
+<span aria-hidden="true">◷</span> Continue where I left off
+            </button>
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" href="#receitas">
+              See selection tools
+            </a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">4</div><div class="text-xs text-neutral-400">Tracks</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">8</div><div class="text-xs text-neutral-400">Modules</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">58</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~9h10</div><div class="text-xs text-neutral-400">Duration</div></div>
+</div>
+</div>
+</header>
+<!-- HERO SVG: uma pessoa entra, 43 oportunidades se abrem, um funil concentra em receita -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+<div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 overflow-hidden">
+<svg aria-label="Diagram: on the left, a person with a skill; in the center, five opportunity categories fanning out—teach, diagnose, build, distribute, and operate; on the right, they all converge into a single recurring revenue box" class="w-full h-auto" role="img" viewbox="0 0 1000 240">
+<defs>
+<lineargradient id="land-grad" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#34d399"></stop><stop offset="1" stop-color="#10b981"></stop>
+</lineargradient>
+<filter height="180%" id="land-glow" width="180%" x="-40%" y="-40%">
+<fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
+</filter>
+<pattern height="32" id="land-grid" patternunits="userSpaceOnUse" width="32">
+<circle cx="1.3" cy="1.3" fill="#10b981" opacity="0.12" r="1.3"></circle>
+</pattern>
+<marker id="land-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#34d399"></path></marker>
+<marker id="land-ahc" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"></path></marker>
+</defs>
+<rect fill="url(#land-grid)" height="240" width="1000" x="0" y="0"></rect>
+<g fill="none" opacity="0.55" stroke="#34d399" stroke-width="1.8">
+<path d="M196,120 C300,120 320,38 452,38" marker-end="url(#land-ah)"></path>
+<path d="M196,120 C300,120 320,79 452,79" marker-end="url(#land-ah)"></path>
+<path d="M196,120 L452,120" marker-end="url(#land-ah)"></path>
+<path d="M196,120 C300,120 320,161 452,161" marker-end="url(#land-ah)"></path>
+<path d="M196,120 C300,120 320,202 452,202" marker-end="url(#land-ah)"></path>
+</g>
+<g fill="none" opacity="0.5" stroke="#38bdf8" stroke-width="1.8">
+<path d="M588,38  C700,38 720,120 800,120" marker-end="url(#land-ahc)"></path>
+<path d="M588,79  C700,79 720,120 800,120" marker-end="url(#land-ahc)"></path>
+<path d="M588,120 L800,120" marker-end="url(#land-ahc)"></path>
+<path d="M588,161 C700,161 720,120 800,120" marker-end="url(#land-ahc)"></path>
+<path d="M588,202 C700,202 720,120 800,120" marker-end="url(#land-ahc)"></path>
+</g>
+<g filter="url(#land-glow)">
+<rect fill="#0e2018" height="68" rx="14" stroke="url(#land-grad)" stroke-width="2" width="156" x="40" y="86"></rect>
+</g>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="19" font-weight="600" text-anchor="middle" x="118" y="114">You</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="118" y="136">a single skill</text>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="136" x="452" y="22"></rect><text fill="#bfe6ff" text-anchor="middle" x="520" y="43">teach</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="136" x="452" y="63"></rect><text fill="#bfe6ff" text-anchor="middle" x="520" y="84">diagnose</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="136" x="452" y="104"></rect><text fill="#bfe6ff" text-anchor="middle" x="520" y="125">build</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="136" x="452" y="145"></rect><text fill="#bfe6ff" text-anchor="middle" x="520" y="166">distribute</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="136" x="452" y="186"></rect><text fill="#bfe6ff" text-anchor="middle" x="520" y="207">operate</text></g>
+</g>
+<g filter="url(#land-glow)">
+<rect fill="#0e2018" height="68" rx="14" stroke="url(#land-grad)" stroke-width="2" width="156" x="800" y="86"></rect>
+</g>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="17" font-weight="600" text-anchor="middle" x="878" y="114">Revenue</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="878" y="136">that repeats</text>
+</svg>
+<p class="text-xs text-neutral-500 mt-2 text-center">Look at the five boxes in the middle: all 43 opportunities fit into five families. You don’t need to choose among 43 things — you need to choose a family and, within it, the opportunity that fits what you already know how to do.</p>
+</div>
+</div>
+<!-- TRILHAS -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="trilhas">
+<h2 class="text-2xl font-bold mb-2">The 4 tracks</h2>
+<p class="text-neutral-400 mb-8 max-w-3xl">Track 1 teaches you how to choose and build the funnel. Tracks 2, 3, and 4 cover the 43 opportunities in order of increasing barriers to entry: anyone can get started with the first ten this week; the last ones require a niche, credentials, or an audience.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-6 transition-colors" href="../curso/trilha1/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full">TRACK 1</span>
+<span class="text-xs text-neutral-500">2 modules · ~2h25</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🧭 Choose your opportunity</h3>
+<p class="text-neutral-400 text-sm mb-4">The four paths for entrepreneurs, the five selection criteria, and the five-stage funnel that turns any opportunity into revenue.</p>
+<div aria-label="Track 1 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter" data-inema-meter="trilha:1" role="progressbar">
+<div class="flex items-center gap-2">
+<div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<span class="text-xs text-neutral-400 w-16" data-inema-meter-frac="">0 of 15</span>
+</div>
+</div>
+</a>
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-6 transition-colors" href="../curso/trilha2/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">TRACK 2</span>
+<span class="text-xs text-neutral-500">2 modules · ~2h00</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">🚀 Opportunities 1 to 10</h3>
+<p class="text-neutral-400 text-sm mb-4">Ways to get started: training, a roadmap, diagnostics, online stores, scheduling, websites, a second brain, business systems, prototypes, and micro-SaaS.</p>
+<div aria-label="Track 2 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter" data-inema-meter="trilha:2" role="progressbar">
+<div class="flex items-center gap-2">
+<div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<span class="text-xs text-neutral-400 w-16" data-inema-meter-frac="">0 of 12</span>
+</div>
+</div>
+</a>
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-6 transition-colors" href="../curso/trilha3/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full">TRACK 3</span>
+<span class="text-xs text-neutral-500">2 modules · ~2h30</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">🧩 Opportunities 11 to 29</h3>
+<p class="text-neutral-400 text-sm mb-4">Your own product, faceless content, fractional roles, renovations, ready-made funnels, education, paid communities, and systems for large companies.</p>
+<div aria-label="Track 3 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter" data-inema-meter="trilha:3" role="progressbar">
+<div class="flex items-center gap-2">
+<div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<span class="text-xs text-neutral-400 w-16" data-inema-meter-frac="">0 of 16</span>
+</div>
+</div>
+</a>
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-6 transition-colors" href="../curso/trilha4/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full">TRACK 4</span>
+<span class="text-xs text-neutral-500">2 modules · ~2h15</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">🏁 Opportunities 30 to 43 + plan</h3>
+<p class="text-neutral-400 text-sm mb-4">Niches with barriers to entry (health care, finance, bidding, events) and audience growth levers — plus a 30-day plan to get on the map and sign your first contract.</p>
+<div aria-label="Track 4 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter" data-inema-meter="trilha:4" role="progressbar">
+<div class="flex items-center gap-2">
+<div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<span class="text-xs text-neutral-400 w-16" data-inema-meter-frac="">0 of 15</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- COMO FUNCIONA -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+<h2 class="text-2xl font-bold mb-8">How studying here works</h2>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"><span class="text-primary font-bold">1</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold text-white mb-2">Read one opportunity at a time</h4>
+<p class="text-sm text-neutral-400 mb-2">Each opportunity always provides the same five answers—what it is, who to sell to, how to charge, the funnel, and the first step—so you can compare apples to apples.</p>
+<p class="text-neutral-300 text-sm">Highlight important passages by selecting the text, and record a question with one click, right where it came up.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"><span class="text-primary font-bold">2</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold text-white mb-2">Mark items as read and track your progress</h4>
+<p class="text-neutral-300 text-sm">Your progress appears at three levels — module, track, and the full course — and is saved in your browser. No sign-up required.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"><span class="text-primary font-bold">3</span></div>
+<div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
+<h4 class="font-semibold text-white mb-2">Go back through My Journey</h4>
+<p class="text-neutral-300 text-sm">The dashboard brings together where you left off, your open questions, and your notes — with export and import in <code class="font-mono text-xs">.json</code> to take your studies to another computer.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ROTEIROS COPY-RUN -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" id="receitas">
+<h2 class="text-2xl font-bold mb-2">Three things you can start using today</h2>
+<p class="text-neutral-400 mb-6 max-w-3xl">Paste it into your favorite AI assistant, replace what’s marked between <code class="font-mono text-xs">&lt; &gt;</code> and use the answer this week. The full version of each one is inside the tracks.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
+<div class="p-6 border-b border-dark-600">
+<h3 class="text-lg font-semibold text-emerald-400 mb-1">🧭 Filter the 43 down to three</h3>
+<p class="text-sm text-neutral-400">Goal: compare the list with your reality (time, money, network) and come away with three candidates, not forty-three.</p>
+</div>
+<div class="p-6">
+<pre class="font-mono text-sm bg-dark-900/70 rounded-lg p-4 overflow-x-auto text-neutral-300 whitespace-pre-wrap">Vou te dar uma lista de oportunidades de negócio com IA e o meu contexto. Sua tarefa é ELIMINAR, não elogiar.
+
+Meu contexto: tenho &lt;horas por semana&gt; livres, &lt;quanto você pode investir sem quebrar&gt; de caixa,
+sei fazer &lt;suas 2 ou 3 habilidades reais&gt; e conheço pessoas em &lt;setores onde você tem contatos&gt;.
+Preciso de dinheiro entrando em &lt;prazo, ex.: 90 dias&gt;.
+
+Lista: &lt;cole aqui os nomes das oportunidades que te interessaram&gt;
+
+Devolva: (1) as que eu devo descartar AGORA e o motivo em uma linha cada;
+(2) as 3 finalistas, com o que me qualifica e o que me falta em cada uma;
+(3) para a finalista número 1, o que eu preciso ter pronto antes da primeira conversa de venda.</pre>
+<p class="text-sm text-neutral-400 mt-3"><strong class="text-neutral-300">How to verify:</strong> the discarded list needs to be longer than the finalists list. If the answer says almost everything is right for you, the context you gave was too vague — try again with numbers.</p>
+</div>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
+<div class="p-6 border-b border-dark-600">
+<h3 class="text-lg font-semibold text-blue-400 mb-1">💵 Set a price without guessing</h3>
+<p class="text-sm text-neutral-400">Goal: turn the client’s pain point into a number before naming a price.</p>
+</div>
+<div class="p-6">
+<pre class="font-mono text-sm bg-dark-900/70 rounded-lg p-4 overflow-x-auto text-neutral-300 whitespace-pre-wrap">Quero precificar um serviço de &lt;o que você vende&gt; para &lt;tipo de empresa&gt;.
+O problema que eu resolvo é &lt;a dor, em uma frase&gt;.
+
+Peça primeiro os 3 a 5 números que você precisa para estimar quanto esse problema custa por mês para ele.
+Depois calcule, mostre a conta aberta e proponha três faixas de preço: entrada, padrão e alta.
+Para cada faixa, diga o que está incluído e o que fica de fora.</pre>
+<p class="text-sm text-neutral-400 mt-3"><strong class="text-neutral-300">How to verify:</strong> the answer needs to start by asking for data, not guessing a price. And the price needs to be based on a fraction of the cost of the problem — never on “what my time is worth.”</p>
+</div>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden">
+<div class="p-6 border-b border-dark-600">
+<h3 class="text-lg font-semibold text-amber-400 mb-1">🎁 Design your lead magnet</h3>
+<p class="text-sm text-neutral-400">Goal: decide what you’ll offer for free to start the conversation — something already good enough to build trust.</p>
+</div>
+<div class="p-6">
+<pre class="font-mono text-sm bg-dark-900/70 rounded-lg p-4 overflow-x-auto text-neutral-300 whitespace-pre-wrap">Eu quero vender &lt;a oportunidade que você escolheu&gt; para &lt;tipo de empresa&gt;.
+Desenhe a menor entrega gratuita possível que já demonstre competência real e caiba em até 2 horas do meu tempo.
+
+Devolva: nome da isca, o que exatamente o cliente recebe, o que eu preciso pesquisar antes,
+a frase de uma linha que eu mando junto e qual é a pergunta natural que ele vai fazer depois de receber.</pre>
+<p class="text-sm text-neutral-400 mt-3"><strong class="text-neutral-300">How to verify:</strong> the lead magnet needs to be specific to that client (something you noticed about their business), never generic material. If it works for any company, it’s not a lead magnet — it’s a flyer.</p>
+</div>
+</div>
+</section>
+<!-- FORMACAO VENDAS COM IA -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" id="formacao">
+<h2 class="text-2xl font-bold mb-2">AI Sales Program</h2>
+<p class="text-neutral-400 mb-8 max-w-3xl">This course is part of a five-course program. Each course stands on its own; together, they cover everything from your first client to a self-sustaining business.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="block bg-dark-800 rounded-xl border border-emerald-500/40 p-5">
+<div class="flex items-center justify-between mb-2">
+<span class="text-emerald-400 font-bold text-sm">COURSE 1</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold">You are here</span>
+</div>
+<h3 class="font-semibold mb-1 text-emerald-400">43 Opportunities to Make Money with AI</h3>
+<p class="text-xs text-neutral-400">The opportunity map and the funnel that turns each one into revenue.</p>
+</div>
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-colors" href="https://inematds.github.io/formacao-vendas-ia-consultoria/">
+<div class="flex items-center justify-between mb-2">
+<span class="text-blue-400 font-bold text-sm">COURSE 2</span>
+<span class="text-xs text-neutral-500">Consulting</span>
+</div>
+<h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">AI Consulting Playbook</h3>
+<p class="text-xs text-neutral-400">Diagnosing, designing solutions, pricing, and delivering AI projects.</p>
+</a>
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-colors" href="https://inematds.github.io/formacao-vendas-ia-fundamentos/">
+<div class="flex items-center justify-between mb-2">
+<span class="text-purple-400 font-bold text-sm">COURSE 3</span>
+<span class="text-xs text-neutral-500">Fundamentals</span>
+</div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">Fundamentals of Selling AI</h3>
+<p class="text-xs text-neutral-400">Mindset, confidence, closing, and ready-to-use scripts for your first sales.</p>
+</a>
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-colors" href="https://inematds.github.io/formacao-vendas-ia-primeiro-cliente/">
+<div class="flex items-center justify-between mb-2">
+<span class="text-amber-400 font-bold text-sm">COURSE 4</span>
+<span class="text-xs text-neutral-500">First client</span>
+</div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">From Zero to Your First AI Client</h3>
+<p class="text-xs text-neutral-400">Auditing, pricing, cold prospecting, and delivering your first project.</p>
+</a>
+<a class="group block bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-colors md:col-span-2" href="https://inematds.github.io/formacao-vendas-ia-masterclass/">
+<div class="flex items-center justify-between mb-2">
+<span class="text-emerald-400 font-bold text-sm">COURSE 5</span>
+<span class="text-xs text-neutral-500">Masterclass</span>
+</div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">Masterclass: How to Sell AI Solutions</h3>
+<p class="text-xs text-neutral-400">The full picture in a single arc: mindset, offer, prospecting, and closing.</p>
+</a>
+</div>
+</section>
+<!-- RESUMO / CTA FINAL -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+<div class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+<h2 class="text-2xl font-bold mb-4">🎓 Where to start</h2>
+<div class="space-y-3 mb-8">
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div><strong class="text-white">You don’t know what to sell</strong><span class="text-neutral-400"> — start with Track 1: the five selection criteria and the funnel that works for any of the 43.</span></div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div><strong class="text-white">You need to earn revenue in the next 60 days</strong><span class="text-neutral-400"> — go straight to Track 2: the ten opportunities with the lowest barrier to entry, each with a first step for this week.</span></div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="text-emerald-400 mt-1">✓</span>
+<div><strong class="text-white">You already serve clients and want to increase your deal size</strong><span class="text-neutral-400"> — Tracks 3 and 4: your own product, fractional roles, systems for large companies, and audience leverage.</span></div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-primary text-gray-900 rounded-lg font-bold hover:bg-yellow-300 transition-colors" href="../curso/trilha1/index.html">
+            Start with Track 1 →
+          </a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../curso/trilha2/index.html">
+            Go straight to the first 10
+          </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>💰 43 Opportunities to Make Money with AI — Interactive course · AI Sales Training · 2026</p>
+</div>
+</footer>
+<!-- SCRIPTS: nucleo v1 -> learn.js -> init -->
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const htmlEl = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !htmlEl.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      htmlEl.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      htmlEl.classList.toggle('dark');
+      localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+<script src="../assets/learn.js"></script>
+<script>
+    if (window.INEMA && typeof window.INEMA.init === 'function') {
+      window.INEMA.init();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 1.2 — Funis: como uma oportunidade vira receita | 43 Oportunidades</title>
+  <meta name="inema-course" content="vender-ia-oportunidades">
+
+  <!-- ANTI-FOUC -->
+  <script>
+  (function () {
+    try {
+      var html = document.documentElement;
+      var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
+      var p = clone(DEF);
+      try {
+        var raw = localStorage.getItem('inema.prefs');
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
+        } else {
+          var legacy = localStorage.getItem('theme');
+          if (legacy === 'light') p.theme = 'claro';
+          else if (legacy === 'dark') p.theme = 'inema-dark';
+        }
+      } catch (e) { p = clone(DEF); }
+      var THEMES = {
+        'inema-dark': { dark: true, attr: null, cs: 'dark' },
+        'claro': { dark: false, attr: null, cs: 'light' },
+        'sepia': { dark: false, attr: 'sepia', cs: 'light' },
+        'foco': { dark: null, attr: 'foco', cs: null },
+        'contraste': { dark: true, attr: 'contraste', cs: 'dark' }
+      };
+      var t = THEMES[p.theme] || THEMES['inema-dark'];
+      if (t.dark === true) html.classList.add('dark');
+      else if (t.dark === false) html.classList.remove('dark');
+      if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
+      html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
+      html.setAttribute('data-font', p.font || 'inter');
+      html.setAttribute('data-accent', p.accent || 'emerald');
+      var s = html.style;
+      var scale = (+p.fontScale || 100);
+      s.setProperty('--inema-font-scale', (scale / 100).toString());
+      s.setProperty('font-size', scale + '%');
+      s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
+      s.setProperty('--lh-body', (+p.leading || 1.7).toString());
+      var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif'
+        : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
+      s.setProperty('--font-body', fam);
+      var ACC = { emerald: [152,76,45], blue: [217,91,60], purple: [258,90,66], amber: [38,92,50], teal: [174,72,41], rose: [350,89,60] };
+      var a = ACC[p.accent] || ACC.emerald;
+      s.setProperty('--accent-h', a[0] + ''); s.setProperty('--accent-s', a[1] + '%'); s.setProperty('--accent-l', a[2] + '%');
+      s.setProperty('--accent', 'hsl(' + a[0] + ' ' + a[1] + '% ' + a[2] + '%)');
+    } catch (err) {
+      try { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; } catch (e) {}
+    }
+  })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/learn.css">
+
+  <script type="application/json" data-inema-manifest>
+{"course":"vender-ia-oportunidades","tracks":[
+{"n":"1","title":"Escolher","modules":[{"id":"1-1","title":"O mapa das 43 e como escolher a sua","topics":8,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Funis: como uma oportunidade vira receita","topics":7,"href":"curso/trilha1/modulo-1-2.html"}]},
+{"n":"2","title":"Oportunidades 1 a 10","modules":[{"id":"2-1","title":"As cinco portas de entrada","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"Do pé na porta ao sistema","topics":6,"href":"curso/trilha2/modulo-2-2.html"}]},
+{"n":"3","title":"Oportunidades 11 a 29","modules":[{"id":"3-1","title":"Produto, conteúdo e posição","topics":8,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Educação, comunidade e sistemas","topics":8,"href":"curso/trilha3/modulo-3-2.html"}]},
+{"n":"4","title":"Oportunidades 30 a 43","modules":[{"id":"4-1","title":"Nichos com barreira","topics":7,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Alavancas de audiência e o plano","topics":8,"href":"curso/trilha4/modulo-4-2.html"}]}
+]}
+</script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: #111827; color: #FACC15; padding: .5rem 1rem; border-radius: .5rem; }
+    .skip:focus { left: .5rem; top: .5rem; }
+    [id] { scroll-margin-top: 88px; }
+    :focus-visible { outline: 3px solid var(--accent-2, #38bdf8); outline-offset: 2px; }
+
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5, 150, 105, 0.12); }
+    html:not(.dark) .bg-emerald-500\/10 { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5, 150, 105, 0.25); }
+    html:not(.dark) .border-emerald-500\/40 { border-color: rgba(5, 150, 105, 0.3); }
+    html:not(.dark) .hover\:bg-emerald-500\/30:hover { background-color: rgba(5, 150, 105, 0.18); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .bg-emerald-900\/20 { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-900\/20 { background-color: rgba(37, 99, 235, 0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37, 99, 235, 0.25); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(220, 38, 38, 0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(220, 38, 38, 0.25); }
+
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161, 98, 7, 0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161, 98, 7, 0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255, 255, 255, 0.95); }
+
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+    @keyframes wf-pulse { 0%,100% { opacity:.55 } 50% { opacity:1 } }
+    @media (prefers-reduced-motion: no-preference) {
+      .wf-a { animation: wf-pulse 2.6s ease-in-out infinite; }
+      .wf-a:nth-child(2){animation-delay:.25s} .wf-a:nth-child(3){animation-delay:.5s}
+      .wf-a:nth-child(4){animation-delay:.75s} .wf-a:nth-child(5){animation-delay:1s}
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-nova-versao" style="position:relative;z-index:9998;background:#FACC15;color:#0c0c10;font:600 14px/1.4 Sora,Inter,system-ui,sans-serif;padding:10px 16px;text-align:center">Este curso tem uma versão nova, mais direta, com prática e conversa simulada. <a href="https://inematds.github.io/formacao-vendas-ia-oportunidades-v72/" style="color:#0c0c10;text-decoration:underline;font-weight:700">Abrir a versão nova →</a></div>
+
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">💰</span>
+            <span class="font-bold text-lg hidden sm:inline">43 Oportunidades</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+          <span class="text-neutral-600">-</span>
+          <a href="https://inema.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <button type="button" data-inema-journey-open class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" title="Sua jornada no curso">
+            <span aria-hidden="true">◷</span><span class="hidden md:inline">Minha jornada</span>
+            <span class="inema-journey-badge hidden" data-inema-journey-badge aria-hidden="true"></span>
+          </button>
+          <a href="index.html" class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Escolher</span></a>
+          <a href="../trilha2/index.html" class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">1 a 10</span></a>
+          <a href="../trilha3/index.html" class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">11 a 29</span></a>
+          <a href="../trilha4/index.html" class="px-2 sm:px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors"><span class="sm:hidden">T4</span><span class="hidden sm:inline">30 a 43</span></a>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-1">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="conteudo">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4" aria-label="Breadcrumb">
+      <div class="flex items-center space-x-2 text-sm text-neutral-400">
+        <a href="../../index.html" class="hover:text-emerald-400">Início</a>
+        <span>/</span>
+        <a href="index.html" class="hover:text-emerald-400">Trilha 1</a>
+        <span>/</span>
+        <span class="text-emerald-400">Módulo 1.2</span>
+      </div>
+    </nav>
+
+    <article id="modulo-1-2" data-inema-module="1-2" data-inema-track="1">
+    <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MODULO 1.2</span>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔻 Funis: como uma oportunidade vira receita</h1>
+        <p class="text-lg text-neutral-400 max-w-3xl" data-inema-block="m1-2-head">As 43 oportunidades das próximas trilhas são diferentes na entrega e idênticas no caminho: prova pública, isca gratuita, conversa curta, entrega paga e receita que se repete. Este módulo ensina o caminho — depois é só encaixar a oportunidade escolhida nele.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">7</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">70</div><div class="text-xs text-neutral-400">Minutos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Prático</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        </div>
+        <div data-inema-meter="modulo:1-2" class="inema-meter mt-6 max-w-md" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo 1.2">
+          <div class="flex items-center gap-3">
+            <span class="text-emerald-400 font-bold w-12" data-inema-meter-pct>0%</span>
+            <div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill></div></div>
+            <span class="text-xs text-neutral-400 w-16" data-inema-meter-frac>0 de 7</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-10">
+
+        <div><!-- COLUNA PRINCIPAL -->
+
+        <!-- TOPICO 1 -->
+        <section id="topico-1" data-inema-topic="modulo-1-2#topico-1" class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
+              <h2 class="text-2xl font-bold">🔻 O que é um funil e por que toda oportunidade tem um</h2>
+            </div>
+            <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0">
+              <span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+          </div>
+          <p class="text-neutral-300 mb-4 leading-relaxed" data-inema-block="m1-2-t1-p1">
+            Ninguém compra na primeira frase. Entre "essa pessoa existe" e "essa pessoa vai receber o meu dinheiro" há uma sequência de passos pequenos, e cada passo é uma venda separada.
+            <strong class="text-emerald-400">Funil é essa sequência escrita</strong> — e, quando ela está escrita, você sempre sabe qual é a sua tarefa de hoje.
+          </p>
+          <div class="bg-dark-700/40 border-l-4 border-emerald-500/40 rounded-r-lg px-4 py-3 mb-6">
+            <p class="text-sm text-neutral-300"><strong class="text-emerald-400">Novo aqui?</strong> <strong>Funil</strong> é o caminho do estranho até o cliente. <strong>Isca</strong> (ou material de captura) é algo útil que você entrega de graça para começar a relação.
+            <strong>Prospecção</strong> é você procurar o cliente; <strong>demanda que chega</strong> é ele procurar você. <strong>Mensalidade</strong> é o valor recorrente cobrado por manter algo funcionando.</p>
+          </div>
+          <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
+            <svg viewBox="0 0 1000 250" class="w-full h-auto" role="img" aria-label="Funil de cinco etapas em linha: prova pública que custa só tempo, isca gratuita que captura contato, conversa de diagnóstico de quinze minutos, entrega paga onde o dinheiro muda de mãos e receita repetida; as duas últimas caixas estão destacadas como as caixas onde há pagamento">
+              <defs>
+                <linearGradient id="m12-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+                <filter id="m12-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <pattern id="m12-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#10b981" opacity="0.12"/></pattern>
+                <marker id="m12-ah" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"/></marker>
+              </defs>
+              <rect x="0" y="0" width="1000" height="250" fill="url(#m12-grid)"/>
+              <g fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.6">
+                <path d="M198,110 L216,110" marker-end="url(#m12-ah)"/>
+                <path d="M382,110 L400,110" marker-end="url(#m12-ah)"/>
+                <path d="M566,110 L584,110" marker-end="url(#m12-ah)"/>
+                <path d="M750,110 L768,110" marker-end="url(#m12-ah)"/>
+              </g>
+              <g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+                <g class="wf-a"><rect x="20" y="72" width="178" height="76" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="109" y="102" text-anchor="middle" fill="#bfe6ff">1. prova pública</text><text x="109" y="124" text-anchor="middle" fill="#7dd3fc" font-size="11.5">custa só tempo</text></g>
+                <g class="wf-a"><rect x="220" y="72" width="162" height="76" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="301" y="102" text-anchor="middle" fill="#bfe6ff">2. isca gratuita</text><text x="301" y="124" text-anchor="middle" fill="#7dd3fc" font-size="11.5">captura contato</text></g>
+                <g class="wf-a"><rect x="404" y="72" width="162" height="76" rx="12" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/><text x="485" y="102" text-anchor="middle" fill="#bfe6ff">3. conversa</text><text x="485" y="124" text-anchor="middle" fill="#7dd3fc" font-size="11.5">15 minutos</text></g>
+              </g>
+              <g filter="url(#m12-glow)"><rect x="588" y="64" width="162" height="92" rx="13" fill="#0e2018" stroke="url(#m12-grad)" stroke-width="2.4"/></g>
+              <text x="669" y="98" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-weight="600" font-size="14">4. entrega paga</text>
+              <text x="669" y="120" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="11.5">o dinheiro muda</text>
+              <text x="669" y="136" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="11.5">de mãos aqui</text>
+              <g filter="url(#m12-glow)"><rect x="772" y="64" width="200" height="92" rx="13" fill="#0e2018" stroke="url(#m12-grad)" stroke-width="2.4"/></g>
+              <text x="872" y="98" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-weight="600" font-size="14">5. receita repetida</text>
+              <text x="872" y="120" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="11.5">mensalidade pequena</text>
+              <text x="872" y="136" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="11.5">ou indicação</text>
+              <text x="500" y="200" text-anchor="middle" fill="#6ee7b7" font-family="Inter,sans-serif" font-size="13">as três primeiras etapas não faturam nada — e são as que fazem as duas últimas existirem</text>
+              <path d="M109,168 C300,226 700,226 872,168" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.45"/>
+            </svg>
+            <p class="text-xs text-neutral-500 mt-2 text-center">Repare que só as duas caixas com brilho verde envolvem pagamento. Quem começa querendo pular direto para elas fica sem etapa 1, 2 e 3 — e sem ninguém para vender.</p>
+          </div>
+          <div class="flex justify-start mt-6">
+            <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+              <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done hidden" aria-hidden="true">●</span>
+              <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done hidden">Lido</span></button>
+          </div>
+        </section>
+
+        <!-- TOPICO 2 -->
+        <section id="topico-2" data-inema-topic="modulo-1-2#topico-2" class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
+              <h2 class="text-2xl font-bold">🎁 A isca: valor entregue antes de qualquer cobrança</h2>
+            </div>
+            <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0">
+              <span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+          </div>
+          <p class="text-neutral-300 mb-4 leading-relaxed" data-inema-block="m1-2-t2-p1">
+            O padrão que aparece em quase todas as 43 oportunidades é o mesmo: <strong class="text-emerald-400">faça o trabalho antes de pedir permissão</strong>.
+            Refaça a página inicial dele e mostre pronta. Rode o diagnóstico e mande o resultado. Redesenhe os anúncios e envie os arquivos.
+            Trabalho pronto e específico converte muitas vezes mais que qualquer promessa bem escrita — porque o cliente vê, não imagina.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+              <h4 class="font-bold text-emerald-400 mb-4">✓ Isca que funciona</h4>
+              <ul class="space-y-3 text-neutral-300 text-sm">
+                <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Feita para <strong>aquele</strong> negócio, com o nome e os dados dele visíveis.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Boa de verdade: se o gratuito é ruim, o pago é presumido pior.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Entregue sem condição: "é seu, com ou sem conversa". Honre isso sempre.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Deixa uma pergunta natural no ar: "e quem vai manter isso funcionando?".</span></li>
+              </ul>
+            </div>
+            <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+              <h4 class="font-bold text-red-400 mb-4">✗ Isca que queima o contato</h4>
+              <ul class="space-y-3 text-neutral-300 text-sm">
+                <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Material genérico que serve para qualquer empresa — isso é panfleto.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Prometer e entregar só depois do cadastro e de três e-mails.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Enviar um arquivo montado às pressas só para ter o que mandar.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Cobrar por algo que o mercado já entrega de graça — vira desconfiança.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+            <p class="text-neutral-300 text-sm">Uma boa isca leva de duas a quatro horas suas — não vinte minutos, não dois dias. Se levar menos, provavelmente é genérica; se levar mais, você não conseguirá repetir para vinte empresas na mesma semana, que é o que faz o volume funcionar.</p>
+          </div>
+          <div class="flex justify-start mt-6">
+            <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+              <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done hidden" aria-hidden="true">●</span>
+              <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done hidden">Lido</span></button>
+          </div>
+        </section>
+
+        <!-- TOPICO 3 -->
+        <section id="topico-3" data-inema-topic="modulo-1-2#topico-3" class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
+              <h2 class="text-2xl font-bold">☎️ A conversa de diagnóstico de 15 minutos</h2>
+            </div>
+            <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0">
+              <span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+          </div>
+          <p class="text-neutral-300 mb-4 leading-relaxed" data-inema-block="m1-2-t3-p1">
+            Quinze minutos, objetivo único: descobrir se existe encaixe. O erro clássico é abrir com "então, como você pensa em usar IA no negócio?" e receber cinco minutos de desabafo em que 70% é queixa e 30% é informação útil — enquanto você assente e o tempo acaba.
+            A ferramenta que resolve isso é a <strong class="text-emerald-400">restrição de uma frase</strong>.
+          </p>
+          <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎙️</span> O roteiro dos 15 minutos</h3>
+            <ul class="space-y-3 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mr-1">1.</span><span><strong class="text-white">Enquadre (30 s):</strong> "São 15 minutos para a gente ver se faz sentido trabalhar junto. Se não fizer, eu falo na hora."</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mr-1">2.</span><span><strong class="text-white">Restrinja (5 min):</strong> "Em uma frase só: qual é o problema que a gente está tentando resolver?" Ele vai usar três. Ótimo — três, não trezentas.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mr-1">3.</span><span><strong class="text-white">Quantifique (5 min):</strong> quantas vezes por semana isso acontece, quanto tempo consome, quanto deixa de entrar.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mr-1">4.</span><span><strong class="text-white">Proponha o próximo passo (3 min):</strong> o diagnóstico pago, com prazo e preço ditos em voz alta, sem rodeio.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mr-1">5.</span><span><strong class="text-white">Encerre no horário.</strong> Terminar antes do combinado comunica mais competência que estender por uma hora.</span></li>
+            </ul>
+          </div>
+          <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2 flex items-center"><span class="mr-2">🧊</span> A postura que abre a porta</h3>
+            <p class="text-neutral-300 text-sm">Chame de indiferença calma: você conduz a conversa como quem tem outros compromissos, ouve até o meio da frase e já sabe responder. Isso não é arrogância — é estrutura. Quem chega implorando por um sim comunica que ninguém mais quis. Quem chega com roteiro comunica que já fez isso antes, mesmo quando é a terceira vez.</p>
+          </div>
+          <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
+            <div class="p-4 border-b border-dark-600"><h3 class="font-semibold text-emerald-400">🎯 Copie e rode agora — seu roteiro de 15 minutos</h3></div>
+            <div class="p-4">
+              <p class="text-sm text-neutral-400 mb-3"><strong class="text-neutral-300">Objetivo:</strong> sair com um roteiro escrito, específico da sua oportunidade, para usar na próxima conversa de verdade — inclusive as perguntas de quantificação.</p>
+              <pre class="font-mono text-sm bg-dark-900/70 rounded-lg p-4 overflow-x-auto text-neutral-300 whitespace-pre-wrap">Monte o roteiro de uma conversa de diagnóstico de 15 minutos.
+Eu vendo &lt;a oportunidade que você escolheu&gt; para &lt;tipo de empresa&gt;.
+
+Entregue, nesta ordem:
+1. A frase de abertura que enquadra a conversa em 30 segundos.
+2. A pergunta de restrição em uma frase, escrita do jeito que eu falaria em voz alta.
+3. Cinco perguntas de quantificação que transformam a dor dele em número por mês.
+   Cada uma tem que ser respondível com um número, não com uma opinião.
+4. A frase que propõe o próximo passo pago, com preço dito sem pedido de desculpas.
+5. Três sinais, durante a conversa, de que essa pessoa NÃO vai comprar — para eu encerrar cedo.</pre>
+              <p class="text-sm text-neutral-400 mt-3"><strong class="text-neutral-300">Como verificar:</strong> leia as cinco perguntas em voz alta. Se alguma puder ser respondida com "acho que sim", ela não quantifica nada — peça para reescrever exigindo número, frequência ou valor.</p>
+            </div>
+          </div>
+          <div class="flex justify-start mt-6">
+            <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+              <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done hidden" aria-hidden="true">●</span>
+              <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done hidden">Lido</span></button>
+          </div>
+        </section>
+
+        <!-- TOPICO 4 -->
+        <section id="topico-4" data-inema-topic="modulo-1-2#topico-4" class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
+              <h2 class="text-2xl font-bold">🩺 O diagnóstico pago e o mapa de rota</h2>
+            </div>
+            <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0">
+              <span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+          </div>
+          <p class="text-neutral-300 mb-4 leading-relaxed" data-inema-block="m1-2-t4-p1">
+            São dois produtos distintos e confundi-los custa dinheiro.
+            <strong class="text-emerald-400">Diagnóstico é identificação</strong>: o que existe hoje, onde vaza tempo, onde vaza receita. <strong class="text-emerald-400">Mapa de rota é solução</strong>: o que fazer, em que ordem, em 30, 60, 90 e 180 dias.
+            O primeiro abre a porta; o segundo paga a conta.
+          </p>
+          <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
+            <svg viewBox="0 0 1000 220" class="w-full h-auto" role="img" aria-label="Dois painéis comparativos: à esquerda o diagnóstico, que olha o presente e responde onde está vazando; à direita o mapa de rota, que olha o futuro e responde em que ordem resolver; uma seta liga um ao outro mostrando que o diagnóstico gera a venda seguinte">
+              <defs>
+                <linearGradient id="m12b-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+                <filter id="m12b-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <pattern id="m12b-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#10b981" opacity="0.12"/></pattern>
+                <marker id="m12b-ah" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#34d399"/></marker>
+              </defs>
+              <rect x="0" y="0" width="1000" height="220" fill="url(#m12b-grid)"/>
+              <rect x="30" y="26" width="410" height="160" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2"/>
+              <text x="235" y="60" text-anchor="middle" fill="#bfe6ff" font-family="Inter,sans-serif" font-weight="600" font-size="18">Diagnóstico</text>
+              <text x="235" y="88" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="13">olha o PRESENTE</text>
+              <text x="235" y="114" text-anchor="middle" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="12.5">"onde está vazando tempo e dinheiro?"</text>
+              <text x="235" y="140" text-anchor="middle" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="12.5">mapa de vazamentos + prioridades</text>
+              <text x="235" y="168" text-anchor="middle" fill="#bfe6ff" font-family="Inter,sans-serif" font-size="12.5">hoje: melhor como isca gratuita</text>
+              <g filter="url(#m12b-glow)"><rect x="560" y="26" width="410" height="160" rx="16" fill="#0e2018" stroke="url(#m12b-grad)" stroke-width="2.4"/></g>
+              <text x="765" y="60" text-anchor="middle" fill="#34d399" font-family="Inter,sans-serif" font-weight="600" font-size="18">Mapa de rota</text>
+              <text x="765" y="88" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13">olha o FUTURO</text>
+              <text x="765" y="114" text-anchor="middle" fill="#6ee7b7" font-family="Inter,sans-serif" font-size="12.5">"em que ordem resolver, e em quanto tempo?"</text>
+              <text x="765" y="140" text-anchor="middle" fill="#6ee7b7" font-family="Inter,sans-serif" font-size="12.5">30 · 60 · 90 · 180 dias</text>
+              <text x="765" y="168" text-anchor="middle" fill="#a7f3d0" font-family="Inter,sans-serif" font-size="12.5">aqui está o preço de verdade</text>
+              <path d="M446,106 L554,106" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#m12b-ah)"/>
+              <text x="500" y="94" text-anchor="middle" fill="#6ee7b7" font-family="Inter,sans-serif" font-size="11.5">"e agora,</text>
+              <text x="500" y="128" text-anchor="middle" fill="#6ee7b7" font-family="Inter,sans-serif" font-size="11.5">por onde eu começo?"</text>
+            </svg>
+            <p class="text-xs text-neutral-500 mt-2 text-center">Olhe a seta do meio: ela é a pergunta que o próprio cliente faz depois de receber o diagnóstico. Você não precisa forçar a venda seguinte — precisa só ter o mapa de rota pronto para responder.</p>
+          </div>
+          <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">⚠️</span> O que mudou nos últimos anos</h3>
+            <p class="text-neutral-300 text-sm">Diagnóstico já foi um produto caro. Hoje o próprio cliente consegue conversar com uma ferramenta de IA por uma hora, de pijama, e sair com um relatório razoável — e ela conhece o negócio dele melhor do que você conheceria em três reuniões. Por isso o diagnóstico migrou para o topo do funil, como isca. O que continua valendo dinheiro é o julgamento: o que priorizar, o que a IA erra e o que fazer na ordem certa.</p>
+          </div>
+          <div class="flex justify-start mt-6">
+            <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+              <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done hidden" aria-hidden="true">●</span>
+              <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done hidden">Lido</span></button>
+          </div>
+        </section>
+
+        <!-- TOPICO 5 -->
+        <section id="topico-5" data-inema-topic="modulo-1-2#topico-5" class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
+              <h2 class="text-2xl font-bold">🐘 Cabeça grande, cauda longa</h2>
+            </div>
+            <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0">
+              <span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+          </div>
+          <p class="text-neutral-300 mb-4 leading-relaxed" data-inema-block="m1-2-t5-p1">
+            O reflexo de quem começa é caçar mensalidade gorda. Só que mensalidade grande gera resistência na hora de fechar, transforma você em suporte técnico e costuma morrer rápido:
+            <strong class="text-emerald-400">a vida média de uma mensalidade dessas gira em torno de dois meses e meio</strong>.
+            A estrutura que funciona melhor hoje é o inverso: entrada alta pela implantação e uma cauda pequena só para manter a porta aberta.
+          </p>
+          <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">💰</span> Por que a entrada alta vende melhor</h3>
+            <ul class="space-y-2 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>O dono da empresa já tem folha de pagamento demais. Uma conta fixa nova pesa mais na decisão do que um pagamento único maior.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Muita gente prefere ser <strong class="text-white">ensinada a mexer no próprio sistema</strong> a depender de alguém que demora duas semanas para trocar uma frase no site.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Você recebe agora e pode decidir o que fazer com o dinheiro: quanto é seu, quanto vai para conquistar o próximo cliente e quanto volta para ferramentas.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>A cauda pequena — algumas centenas por mês — vale menos pelo valor e mais pelo <strong class="text-white">motivo de continuar conversando</strong>. É de conversa que sai o próximo projeto.</span></li>
+            </ul>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+              <h4 class="font-bold text-emerald-400 mb-4">✓ Formatos de cauda que se sustentam</h4>
+              <ul class="space-y-3 text-neutral-300 text-sm">
+                <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Treinamento contínuo da equipe — margem alta, trabalho previsível.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Revisão trimestral do que foi entregue, com um relatório curto.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Comissão sobre resultado, quando o resultado for medível.</span></li>
+              </ul>
+            </div>
+            <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+              <h4 class="font-bold text-red-400 mb-4">✗ Caudas que viram armadilha</h4>
+              <ul class="space-y-3 text-neutral-300 text-sm">
+                <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Manutenção ilimitada: você vira suporte e o valor não acompanha o trabalho.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Mensalidade alta logo no primeiro contrato — quase sempre trava o fechamento.</span></li>
+                <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Ajustes por e-mail sem escopo: cento e cinquenta pedidos depois, você perdeu dinheiro.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+            <p class="text-neutral-300 text-sm">Existe um jeito elegante de travar receita recorrente: depois de dois ou três meses de comissão sobre resultado, ofereça trocar por um contrato anual de valor um pouco menor que a média mensal já paga. Ele ganha previsibilidade e teto; você ganha doze meses garantidos em vez de um cliente que some.</p>
+          </div>
+          <div class="flex justify-start mt-6">
+            <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+              <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done hidden" aria-hidden="true">●</span>
+              <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done hidden">Lido</span></button>
+          </div>
+        </section>
+
+        <!-- TOPICO 6 -->
+        <section id="topico-6" data-inema-topic="modulo-1-2#topico-6" class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
+              <h2 class="text-2xl font-bold">🧮 Preço = dor × probabilidade × velocidade</h2>
+            </div>
+            <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0">
+              <span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+          </div>
+          <p class="text-neutral-300 mb-4 leading-relaxed" data-inema-block="m1-2-t6-p1">
+            Precificação parece mágica e não é. A regra base:
+            <strong class="text-emerald-400">você não cobra o que quer receber, cobra o que ele está disposto a pagar</strong> — e isso é função do valor que ele recebe, não do seu esforço.
+            Três fatores decidem: quanto custa o problema hoje, qual a chance de você resolver, e em quanto tempo.
+          </p>
+          <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2 flex items-center"><span class="mr-2">📊</span> A conta, na prática</h3>
+            <p class="text-neutral-300 text-sm mb-3">Um exemplo de raciocínio, com valores em US$ apenas como ordem de grandeza — adapte ao seu mercado:</p>
+            <ul class="space-y-2 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Dor:</strong> a empresa perde 31 ligações por mês fora do horário. Ticket médio de US$ 400. São US$ 12.400 escapando por mês.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Probabilidade:</strong> você já fez isso três vezes e recuperou em média metade das ligações. Chance alta, mas não total.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Velocidade:</strong> funcionando em uma semana, não em três meses. Velocidade sobe muito o valor percebido.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><strong class="text-white">Preço defensável:</strong> uma fração do ganho mensal esperado. Nunca "minha hora vale X vezes as horas gastas".</span></li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">🎚️</span> Quando você ainda não tem histórico</h3>
+            <p class="text-neutral-300 mb-3">Sem casos anteriores, a probabilidade é baixa e o preço acompanha. Duas saídas honestas:</p>
+            <ul class="space-y-2 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong class="text-white">Cobre pela hora que você acredita valer</strong> — a sua estimativa, não a que uma ferramenta de IA sugeriu. Ela vai dizer um número alto para agradar; o mercado dirá outro.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong class="text-white">Cobre por resultado</strong>: uma porcentagem do que entrar por causa do seu trabalho. Risco zero para ele, e o seu preço sobe junto com a entrega.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span>Com histórico, some um prêmio de 15% a 20% sobre a conta de horas — esse prêmio <em>é</em> a probabilidade e a velocidade.</span></li>
+            </ul>
+          </div>
+          <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+            <p class="text-neutral-300 text-sm">Quando já estiver bom, o método é bruto e funciona: aumente o preço até começarem a dizer não. Quando vários disserem não no mesmo patamar, recue 10%. Esse é o seu preço.</p>
+          </div>
+          <div class="flex justify-start mt-6">
+            <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+              <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done hidden" aria-hidden="true">●</span>
+              <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done hidden">Lido</span></button>
+          </div>
+        </section>
+
+        <!-- TOPICO 7 -->
+        <section id="topico-7" data-inema-topic="modulo-1-2#topico-7" class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">7</span>
+              <h2 class="text-2xl font-bold">♻️ O motor de clientes: o funil que alimenta os outros</h2>
+            </div>
+            <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0">
+              <span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+          </div>
+          <p class="text-neutral-300 mb-4 leading-relaxed" data-inema-block="m1-2-t7-p1">
+            Existe um funil que roda por baixo de qualquer uma das 43 oportunidades, e ele é feito de coisas gratuitas.
+            Material realmente bom em troca do contato, resposta imediata dizendo onde tem mais, um espaço gratuito para acompanhar quem chegou, e degraus pagos depois.
+            <strong class="text-emerald-400">Cada peça nova é mais uma superfície onde alguém pode tropeçar em você.</strong>
+          </p>
+          <div class="space-y-6 mb-6">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">1</span></div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-white mb-1">Material gratuito em troca do contato</h4>
+                <p class="text-sm text-neutral-400">Um modelo, um guia, um conjunto de instruções prontas. Gratuito ou "pague quanto quiser". Não é o dinheiro que interessa: é a base de contatos, que fica sua para sempre.</p></div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-white mb-1">Resposta automática no mesmo minuto</h4>
+                <p class="text-sm text-neutral-400">"Quer mais coisas como essa? Está tudo centralizado aqui." Nunca deixe a pessoa baixar e sumir — o interesse dura poucos minutos.</p></div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">3</span></div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-white mb-1">Espaço gratuito para acompanhar</h4>
+                <p class="text-sm text-neutral-400">Um grupo, uma lista, um canal. Sem pressão de entrega, sem ninguém cobrando retorno de investimento — e é onde as pessoas veem os resultados dos outros e ficam.</p></div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">4</span></div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-white mb-1">Degraus pagos, do menor ao maior</h4>
+                <p class="text-sm text-neutral-400">Preço pequeno primeiro, depois nível padrão, depois algo mais caro. Cada degrau é conquistado, nunca empurrado — e é a base gratuita que alimenta todos eles.</p></div>
+            </div>
+          </div>
+          <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2 flex items-center"><span class="mr-2">📊</span> A matemática discreta disso</h3>
+            <p class="text-neutral-300 text-sm">Materiais gratuitos consistentes podem gerar dezenas de milhares de contatos ao longo de alguns anos, com uma parte das pessoas pagando espontaneamente por algo que era de graça. E há um efeito secundário maior que o direto: quem baixa e gosta avalia bem, a plataforma passa a recomendar você para quem nunca ouviu seu nome, e o alcance cresce sem você publicar nada novo.</p>
+          </div>
+          <div class="bg-primary/10 rounded-xl border border-primary/40 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+            <p class="text-neutral-300 text-sm">Centralize tudo em um lugar só. Materiais espalhados em links soltos não constroem base de contatos nem reputação: constroem arquivos órfãos. Um endereço, um cadastro, uma coleção que cresce.</p>
+          </div>
+          <div class="flex justify-start mt-6">
+            <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+              <span class="inema-ico-todo" aria-hidden="true">○</span><span class="inema-ico-done hidden" aria-hidden="true">●</span>
+              <span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done hidden">Lido</span></button>
+          </div>
+        </section>
+
+        <!-- CHECAGEM LEVE -->
+        <div data-inema-check="modulo-1-2#q1" class="inema-check bg-dark-800 border border-dark-600 rounded-xl p-6 mb-12">
+          <p class="font-medium mb-4">Auto-verificação rápida (opcional): você fechou uma implantação. Qual estrutura de preço reduz mais o seu risco?</p>
+          <div class="inema-check-options space-y-2">
+            <button type="button" data-inema-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Entrada simbólica e uma mensalidade alta de manutenção</button>
+            <button type="button" data-inema-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Entrada alta pela implantação e uma cauda pequena que mantém a conversa viva</button>
+            <button type="button" data-inema-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Tudo de graça agora, cobrando só depois que der certo</button>
+          </div>
+          <div data-inema-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
+        </div>
+
+        <!-- RESUMO FINAL -->
+        <section class="mb-12">
+          <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
+            <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎓</span> Resumo do Módulo</h2>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Cinco etapas servem para as 43</strong><span class="text-neutral-400"> — prova pública, isca, conversa, entrega paga e receita repetida.</span></div></div>
+              <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Trabalho pronto vence promessa</strong><span class="text-neutral-400"> — a isca precisa ser específica daquele negócio e realmente boa.</span></div></div>
+              <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Diagnóstico abre a porta, mapa de rota paga a conta</strong><span class="text-neutral-400"> — são dois produtos, com dois preços.</span></div></div>
+              <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Preço vem do valor recebido</strong><span class="text-neutral-400"> — custo da dor, chance de resolver e velocidade; nunca do seu esforço.</span></div></div>
+            </div>
+            <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+              <h3 class="font-semibold text-emerald-400 mb-2">Próximo Módulo:</h3>
+              <p class="text-neutral-300">2.1 - As cinco portas de entrada — as oportunidades 1 a 5, cada uma com o que é, para quem vender, como cobrar e o primeiro passo desta semana.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a>
+              <a href="../trilha2/modulo-2-1.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">Próximo Módulo →</a>
+            </div>
+          </div>
+        </section>
+
+        <div data-inema-meter="trilha:1" class="inema-meter max-w-md mb-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 1">
+          <div class="flex items-center gap-2"><span class="text-xs text-neutral-500 w-24">Trilha 1:</span>
+            <div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill></div></div>
+            <span class="text-xs text-neutral-400 w-14" data-inema-meter-pct>0%</span>
+          </div>
+        </div>
+        <div data-inema-meter="curso" class="inema-meter max-w-md mb-8" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do curso">
+          <div class="flex items-center gap-2"><span class="text-xs text-neutral-500 w-24">Curso:</span>
+            <div class="inema-bar flex-1"><div class="inema-bar__fill" data-inema-meter-fill></div></div>
+            <span class="text-xs text-neutral-400 w-14" data-inema-meter-pct>0%</span>
+          </div>
+        </div>
+
+        </div><!-- /coluna principal -->
+
+        <!-- TOC STICKY -->
+        <nav data-inema-toc aria-label="Índice da página" class="hidden lg:block sticky top-24 self-start">
+          <p class="text-sm text-neutral-400 mb-2">Seção <span class="inema-toc-pos">1</span> de <span class="inema-toc-total">7</span></p>
+          <ul class="space-y-1 text-sm">
+            <li><a href="#topico-1" class="inema-toc-link block px-3 py-1.5 rounded-lg text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10">1. O que é um funil</a></li>
+            <li><a href="#topico-2" class="inema-toc-link block px-3 py-1.5 rounded-lg text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10">2. A isca</a></li>
+            <li><a href="#topico-3" class="inema-toc-link block px-3 py-1.5 rounded-lg text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10">3. A conversa de 15 min</a></li>
+            <li><a href="#topico-4" class="inema-toc-link block px-3 py-1.5 rounded-lg text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10">4. Diagnóstico e rota</a></li>
+            <li><a href="#topico-5" class="inema-toc-link block px-3 py-1.5 rounded-lg text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10">5. Cabeça e cauda</a></li>
+            <li><a href="#topico-6" class="inema-toc-link block px-3 py-1.5 rounded-lg text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10">6. A fórmula do preço</a></li>
+            <li><a href="#topico-7" class="inema-toc-link block px-3 py-1.5 rounded-lg text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10">7. O motor de clientes</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-dark-600 py-8 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>💰 43 Oportunidades de Ganhar Dinheiro com IA — Módulo 1.2 · Trilha Escolher · 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const htmlEl = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !htmlEl.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden'); htmlEl.classList.remove('dark');
+    } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      htmlEl.classList.toggle('dark');
+      localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+  <script src="../../assets/learn.js"></script>
+  <script>
+    if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }
+    window.addEventListener('DOMContentLoaded', function () {
+      if (window.INEMA && INEMA.registerCheck) {
+        INEMA.registerCheck('modulo-1-2#q1', {
+          answer: 1,
+          explain: {
+            0: 'Não: mensalidade alta trava o fechamento, transforma você em suporte e costuma durar poucos meses.',
+            1: 'Exato — você recebe pelo trabalho agora e mantém um motivo pequeno para continuar conversando, que é de onde sai o próximo projeto.',
+            2: 'Não como regra: trabalhar de graça só se justifica quando o retorno é dado ou porta aberta, com prazo e escopo definidos.'
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
