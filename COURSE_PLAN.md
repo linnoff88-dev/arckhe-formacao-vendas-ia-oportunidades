@@ -1,6 +1,6 @@
 # 43 Oportunidades de Ganhar Dinheiro com IA — plano do curso
 
-Curso interativo do INEMA.CLUB, parte da **Formação Vendas com IA**. Quatro trilhas, oito módulos, 58 tópicos.
+Curso interativo do ARCKHÉ AI, parte da **Formação Vendas com IA**. Quatro trilhas, oito módulos, 58 tópicos.
 Todas as 43 oportunidades aparecem nomeadas, com o que é, para quem vender, como cobrar e qual é o primeiro passo.
 
 Valores em US$ vêm de mercados maduros e servem como ordem de grandeza — adapte ao seu mercado.
