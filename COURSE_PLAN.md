@@ -1,6 +1,6 @@
 # 43 Oportunidades de Ganhar Dinheiro com IA — plano do curso
 
-Curso interativo do ARCKHÉ AI, parte da **Formação Vendas com IA**. Quatro trilhas, oito módulos, 58 tópicos.
+Curso interativo do ARCKHÉ AI, parte da **Formaçêo Vendas com IA**. Quatro trilhas, oito módulos, 58 tópicos.
 Todas as 43 oportunidades aparecem nomeadas, com o que é, para quem vender, como cobrar e qual é o primeiro passo.
 
 Valores em US$ vêm de mercados maduros e servem como ordem de grandeza — adapte ao seu mercado.
@@ -13,7 +13,7 @@ Valores em US$ vêm de mercados maduros e servem como ordem de grandeza — adap
 3. Sucesso é uma série de máximos locais
 4. A estratégia da experiência acumulada
 5. Qualquer oportunidade tem escada
-6. Use IA num negócio — não abra um "negócio de IA"
+6. Use IA num negócio — nêo abra um "negócio de IA"
 7. Volume com pivô: mil tentativas, dados, ajuste
 8. Os cinco critérios para escolher a sua oportunidade
 
@@ -29,7 +29,7 @@ Valores em US$ vêm de mercados maduros e servem como ordem de grandeza — adap
 ## Trilha 2 — Oportunidades 1 a 10 (blue)
 
 **2.1 As cinco portas de entrada (1 a 5)** (6 tópicos)
-1. O padrão comum: ensinar, diagnosticar, entregar
+1. O padrêo comum: ensinar, diagnosticar, entregar
 2. Oportunidade 1 — Treinamentos de IA para equipes
 3. Oportunidade 2 — Mapas de rota de IA
 4. Oportunidade 3 — Diagnósticos de IA
@@ -42,21 +42,21 @@ Valores em US$ vêm de mercados maduros e servem como ordem de grandeza — adap
 3. Oportunidade 8 — Montar o sistema operacional da empresa
 4. Oportunidade 9 — Protótipos de aplicativos internos
 5. Oportunidade 10 — Micro-SaaS para uma empresa só
-6. Cabeça grande, cauda longa: por que a manutenção mensal encolheu
+6. Cabeça grande, cauda longa: por que a manutençêo mensal encolheu
 
 ## Trilha 3 — Oportunidades 11 a 29 (purple)
 
-**3.1 Produto, conteúdo e posição (11 a 19)** (8 tópicos)
+**3.1 Produto, conteúdo e posiçêo (11 a 19)** (8 tópicos)
 1. Oportunidade 11 — SaaS pronto para uma dor específica
 2. Oportunidade 12 — Agência de criativos com IA
 3. Oportunidades 13 e 14 — Canal sem rosto e app sem rosto
-4. Oportunidade 15 — Geração e qualificação de leads
+4. Oportunidade 15 — Geraçêo e qualificaçêo de leads
 5. Oportunidade 16 — Diretor de IA fracionado
 6. Oportunidade 17 — Especialista em reforma de IA
 7. Oportunidade 18 — Instalações locais e privadas
 8. Oportunidade 19 — Funis de vendas e marketing prontos
 
-**3.2 Educação, comunidade e sistemas (20 a 29)** (8 tópicos)
+**3.2 Educaçêo, comunidade e sistemas (20 a 29)** (8 tópicos)
 1. Oportunidades 20 e 21 — Guias de estudo e cursos em marketplace
 2. Oportunidades 22 e 23 — Comunidade gratuita que vira paga e turmas intensivas
 3. Oportunidade 24 — Programa de ticket alto para empreendedores
@@ -66,28 +66,28 @@ Valores em US$ vêm de mercados maduros e servem como ordem de grandeza — adap
 7. Oportunidade 28 — Agentes de voz
 8. Oportunidades 29 e o salto para a empresa grande
 
-## Trilha 4 — Oportunidades 30 a 43 e plano de ação (amber)
+## Trilha 4 — Oportunidades 30 a 43 e plano de açêo (amber)
 
 **4.1 Nichos com barreira (30 a 36)** (7 tópicos)
-1. Oportunidade 30 — Reativação de base parada
+1. Oportunidade 30 — Reativaçêo de base parada
 2. Oportunidade 31 — Soluções para o mercado financeiro
-3. Oportunidade 32 — Gestão de eventos com IA
+3. Oportunidade 32 — Gestêo de eventos com IA
 4. Oportunidade 33 — Sistemas de saúde e bem-estar
 5. Oportunidade 34 — Propostas e licitações com IA
-6. Oportunidade 35 — Aplicativos de visualização
-7. Oportunidade 36 — Utilitários de extração de dados
+6. Oportunidade 35 — Aplicativos de visualizaçêo
+7. Oportunidade 36 — Utilitários de extraçêo de dados
 
 **4.2 Alavancas de audiência e o plano (37 a 43)** (8 tópicos)
-1. Oportunidade 37 — Otimizar a operação de prospecção fria
-2. Oportunidade 38 — Gestão de redes sociais com IA
+1. Oportunidade 37 — Otimizar a operaçêo de prospecçêo fria
+2. Oportunidade 38 — Gestêo de redes sociais com IA
 3. Oportunidade 39 — Pacotes de destravamento de audiência
-4. Oportunidade 40 — Plataformas de treino e simulação
+4. Oportunidade 40 — Plataformas de treino e simulaçêo
 5. Oportunidade 41 — Plataformas de recrutamento
 6. Oportunidade 42 — Programa de candidatura a vagas
 7. Oportunidade 43 — Comunidades turbinadas por IA
 8. Seu plano de 30 dias: da escolha ao primeiro contrato
 
-## Padrão de cada oportunidade
+## Padrêo de cada oportunidade
 
 Todo tópico de oportunidade responde quatro perguntas, sempre na mesma ordem:
 **o que é · para quem vender · como cobrar · primeiro passo desta semana** — e, nas oportunidades-âncora de cada trilha, o funil em cinco etapas aparece desenhado por inteiro.
